@@ -1,0 +1,29 @@
+.dashboard {
+  min-height: 100vh;
+}
+
+.dashboard-content {
+  padding: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-actions {
+  margin: 2em 0;
+}
+
+.dashboard-actions button {
+  width: auto;
+}
+
+.loading {
+  text-align: center;
+  padding: 2em;
+  font-size: 1.2em;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  color: #888;
+  margin-bottom: 0.5em;
+}

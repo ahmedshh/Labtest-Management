@@ -1,0 +1,54 @@
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.btn-primary {
+  background-color: #646cff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #535bf2;
+}
+
+.btn-secondary {
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #3a3a3a;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 0.5em;
+}
+
+.actions-cell button {
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+}

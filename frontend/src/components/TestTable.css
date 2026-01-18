@@ -1,0 +1,32 @@
+.test-table-container {
+  margin-top: 2em;
+}
+
+.test-table-container h2 {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.no-tests {
+  text-align: center;
+  padding: 3em;
+  color: #888;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin: 1em 0;
+  padding: 0.5em;
+  background-color: #2a1a1a;
+  border-radius: 4px;
+}
+
+@media (prefers-color-scheme: light) {
+  .error-message {
+    background-color: #ffe5e5;
+  }
+}
