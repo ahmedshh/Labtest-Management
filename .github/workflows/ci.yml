@@ -69,18 +69,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: frontend/package-lock.json
+          # Don't use cache to avoid issues with optional dependencies on different platforms
       
       # Step 2.3: Install frontend dependencies
       - name: Install frontend dependencies
         working-directory: ./frontend
         run: |
-          # Use npm install instead of npm ci to ensure optional dependencies are installed
-          # npm ci can have issues with optional dependencies on different platforms
+          # Remove both package-lock.json and node_modules as per npm bug #4828
+          # package-lock.json from Windows doesn't include Linux optional dependencies
+          rm -rf node_modules package-lock.json
+          # Fresh install will include platform-specific optional dependencies (e.g., rollup-linux-x64-gnu)
           npm install
-          # Explicitly ensure rollup optional dependencies are available
-          npm rebuild rollup || true
       
       # Step 2.4: Build React application
       - name: Build React app
