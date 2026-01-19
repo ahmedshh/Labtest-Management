@@ -75,7 +75,12 @@ jobs:
       # Step 2.3: Install frontend dependencies
       - name: Install frontend dependencies
         working-directory: ./frontend
-        run: npm ci
+        run: |
+          # Use npm install instead of npm ci to ensure optional dependencies are installed
+          # npm ci can have issues with optional dependencies on different platforms
+          npm install
+          # Explicitly ensure rollup optional dependencies are available
+          npm rebuild rollup || true
       
       # Step 2.4: Build React application
       - name: Build React app
