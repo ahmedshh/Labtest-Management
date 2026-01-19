@@ -33,10 +33,10 @@ jobs:
       
       # Step 1.4: Run PyTest with coverage
       - name: Run PyTest
+        env:
+          DATABASE_URL: 'sqlite:///:memory:'
         run: |
           pytest tests/ -v --cov=backend --cov-report=xml
-        env:
-          DATABASE_URL: sqlite:///:memory:
       
       # Step 1.5: Upload coverage reports (optional)
       - name: Upload coverage to Codecov
