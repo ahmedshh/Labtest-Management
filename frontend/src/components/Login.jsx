@@ -36,7 +36,7 @@ const Login = ({ onLogin }) => {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h2>Laboratory Information System</h2>
+        <h2>Laboratory Information Systems</h2>
         <h3>Login</h3>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
@@ -51,7 +51,7 @@ const Login = ({ onLogin }) => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Passcode:</label>
             <input
               type="password"
               id="password"
