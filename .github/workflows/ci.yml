@@ -117,8 +117,8 @@ jobs:
         with:
           context: .
           push: false
+          load: true
           tags: lis:latest
-          cache-from: type=registry,ref=lis:latest
           cache-to: type=inline
       
       # Step 3.4: Test Docker image (optional)
