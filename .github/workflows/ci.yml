@@ -1,11 +1,12 @@
 name: CI/CD Pipeline
 
-# Trigger on push to main branch and pull requests
+# Trigger on push to main branch, pull requests, and manual workflow dispatch
 on:
   push:
     branches: [ main, master, develop ]
   pull_request:
     branches: [ main, master, develop ]
+  workflow_dispatch:  # Manual trigger from GitHub Actions UI
 
 jobs:
   # Job 1: Backend Testing and Linting
