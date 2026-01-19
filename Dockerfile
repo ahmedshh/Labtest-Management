@@ -8,7 +8,9 @@ WORKDIR /app/frontend
 COPY frontend/package.json frontend/package-lock.json* ./
 
 # Install frontend dependencies
-RUN npm install
+# Remove package-lock.json to ensure Alpine Linux (musl) optional dependencies are installed
+# The lock file from Windows/Linux glibc doesn't include musl-specific optional deps
+RUN rm -f package-lock.json && npm install
 
 # Copy frontend source code
 COPY frontend/ .
